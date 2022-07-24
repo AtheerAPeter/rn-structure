@@ -34,7 +34,7 @@ const Details = (props: Props) => {
   return (
     <View>
       <TouchableOpacity onPress={back} style={styles.backBtn}>
-        <Icon name="github" type="AntDesign" size={30} color="purple" />
+        <Icon name="left" type="AntDesign" size={25} color="black" />
       </TouchableOpacity>
       <Image style={styles.image} source={{uri: food?.image}} />
       <View style={styles.type}>
@@ -64,15 +64,21 @@ const styles = StyleSheet.create({
   description: {marginTop: 10},
   backBtn: {
     position: 'absolute',
-    top: 30,
-    left: 20,
+    top: 40,
+    left: 10,
     zIndex: 1,
     backgroundColor: '#fff',
     padding: 10,
     borderRadius: 50,
-    width: 50,
-    height: 50,
     alignItems: 'center',
     justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
 });
