@@ -11,6 +11,7 @@ import {StackScreenProps} from '@react-navigation/stack';
 import {RootStackParamList} from '../../@Types/INavigation';
 import {useFoodById} from '../../Hooks/useFoodById';
 import {ScreenWidth} from '../../Theme/dimentions';
+import Icon from 'react-native-dynamic-vector-icons';
 
 type Props = StackScreenProps<RootStackParamList, 'Details'>;
 
@@ -33,7 +34,7 @@ const Details = (props: Props) => {
   return (
     <View>
       <TouchableOpacity onPress={back} style={styles.backBtn}>
-        <Text>X</Text>
+        <Icon name="github" type="AntDesign" size={30} color="purple" />
       </TouchableOpacity>
       <Image style={styles.image} source={{uri: food?.image}} />
       <View style={styles.type}>
